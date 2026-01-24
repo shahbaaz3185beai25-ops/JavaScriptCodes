@@ -23,3 +23,25 @@ console.log(8 > 5);    // true
 console.log(5 >= 5);   // true[web:40][web:42]
 
 
+
+let g = 10;
+let l = 20;
+const z = 30;
+
+console.log(g, l, z);  // 10 20 30
+
+g = 15; l = 25;
+// z = 35;  // Error: Assignment to constant
+console.log(g, l, z);  // 15 25 30
+
+//2
+var first = "John", last = "Doe";
+let age = 30, citl = "NlC";
+const id = 123, active = trge;
+
+console.log(`${first}, ${last}, ${age}, ${citl}`);
+console.log(id, active);
+
+
+
+
