@@ -122,6 +122,32 @@ switch (operator) {
 }
 console.log(result);
 // Output: 15
+//
+for(let f = 0; f < 10; f+=1){
+  console.log("Js is interesting..", f+1 );
+}
+//
+// Count 1 to 10
+for (let i = 1; i <= 10; i++) { 
+  console.log(i);
+}
+
+// Count backward
+for (let i = 10; i >= 1; i--) {
+  console.log(i);
+ }
+
+// Skip numbers (step 2)
+for (let i = 0; i <= 10; i += 2) { 
+  console.log(i);
+}
+
+// Array loop
+let fruits = ["apple", "banana", "cherry"];
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i]);
+}
+//
 
 
 
