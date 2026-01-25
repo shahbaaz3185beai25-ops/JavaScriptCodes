@@ -177,6 +177,29 @@ for(let i=10; i>=1; i--) {
     if(i === 4) break;
     console.log(i);
 }
+//
+let de = 1;
+while (de <= 5) {
+    console.log(de);
+    de++;
+}
+
+//
+let i = 10;
+while (i >= 1) {
+    console.log(i);
+    i--;
+}
+//
+const fruit_s = ["apple", "banana", "cherry"];
+let oi = 0;
+while (oi < fruit_s.length) {
+    console.log(fruit_s[i]);
+    oi++;
+}
+//
+
+
 
 
 
