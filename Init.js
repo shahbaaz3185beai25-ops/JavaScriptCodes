@@ -148,6 +148,35 @@ for (let i = 0; i < fruits.length; i++) {
     console.log(fruits[i]);
 }
 //
+for(let i=1; i<=5; i++) {
+    console.log(i);
+}
+//
+for(let i=0; i<=10; i+=2) {
+    console.log(i);
+}
+let str = "hello";
+let count = 0;
+for(let i=0; i<str.length; i++) {
+    if("aeiou".includes(str[i])) count++;
+}
+console.log("Vowels:", count);
+//
+for(let i=1; i<=5; i++) {
+    console.log("*".repeat(i));
+}
+//
+let nums = [4, 2, 9, 7, 5];
+let max = nums[0];
+for(let i=1; i<nums.length; i++) {
+    if(nums[i] > max) max = nums[i];
+}
+console.log("Largest:", max);
+//
+for(let i=10; i>=1; i--) {
+    if(i === 4) break;
+    console.log(i);
+}
 
 
 
