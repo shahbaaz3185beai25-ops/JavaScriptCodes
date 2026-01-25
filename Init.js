@@ -198,6 +198,42 @@ while (oi < fruit_s.length) {
     oi++;
 }
 //
+let ip = 1, fact = 1;
+while (ip <= 5) {
+    fact *= ip;
+    ip++;
+}
+console.log("5! =", fact);
+//
+let id = 1;
+while (id <= 10) {
+    if (id% 3 !== 0) console.log(id);
+    id++;
+}
+//
+let iw = 0;
+while (true) {
+    console.log(iw);
+    iw++;
+    if (iw === 3) break;
+}
+//
+let ik = 0;
+while (ik < 5) {
+    ik++;
+    if (ik === 3) continue;
+    console.log(ik);
+}
+//
+let ij = 11;
+while (true) {
+    if (ij % 2 === 0) {
+        console.log("First even >10:", ij);
+        break;
+    }
+    ij++;
+}
+
 
 
 
