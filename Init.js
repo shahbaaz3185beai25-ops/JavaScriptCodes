@@ -268,6 +268,52 @@ for (let i = 1; i <= n; i++) {
 
 console.log(pattern);
 //
+let no = 5;
+let attern = "";
+
+for (let i = no; i >= 1; i--) {
+  for (let j = 1; j <= i; j++) {
+    attern += "*";
+  }
+  attern += "\n";
+}
+
+console.log(attern);
+//
+let nq = 5;
+let pat = "";
+
+for (let i = nq; i >= 1; i--) {
+  pat += " ".repeat(nq - i);
+  pat += "*".repeat(i);
+  pat += "\n";
+}
+
+console.log(pattern);
+//
+let na = 5;
+let pats = "";
+
+for (let i = 1; i <= na; i++) {
+  pats += " ".repeat(n - i);
+  pats += "*".repeat(2 * i - 1);
+  pats += "\n";
+}
+
+console.log(pats);
+//
+let nm = 5;
+let p = "";
+
+for (let i = nm; i >= 1; i--) {
+  p += " ".repeat(nm - i);
+  p += "*".repeat(2 * i - 1);
+  p += "\n";
+}
+
+console.log(p);
+//
+
 
 
 
