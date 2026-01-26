@@ -233,6 +233,41 @@ while (true) {
     }
     ij++;
 }
+let ne = 5;
+let p_attern = "";
+
+for (let i = 0; i < ne; i++) {
+  for (let j = 0; j < ne; j++) {
+    p_attern += "* ";
+  }
+  p_attern += "\n";
+}
+
+console.log(p_attern);
+//
+let nw = 5;
+let pa_ttern = "";
+
+for (let i = 1; i <= nw; i++) {
+  for (let j = 1; j <= i; j++) {
+    pa_ttern += "*";
+  }
+  pa_ttern += "\n";
+}
+
+console.log(pa_ttern);
+//
+let n = 5;
+let pattern = "";
+
+for (let i = 1; i <= n; i++) {
+  pattern += " ".repeat(n - i);
+  pattern += "*".repeat(i);
+  pattern += "\n";
+}
+
+console.log(pattern);
+//
 
 
 
