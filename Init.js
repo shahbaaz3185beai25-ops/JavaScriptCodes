@@ -377,6 +377,15 @@ if (c2 == 0) {
 } else if (c2 < 0 && c2 % 2 != 0) {
   console.log("Negative and Odd");
 }
+//
+let ipq = 1;
+
+do {
+  console.log(ipq);
+  ipq++;
+} while (i <= 5);
+//
+
 
 
 
