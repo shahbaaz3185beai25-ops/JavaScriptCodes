@@ -313,6 +313,21 @@ for (let i = nm; i >= 1; i--) {
 
 console.log(p);
 //
+let r = 90;
+let b ;
+(r>b)? b=89:b=78;
+console.log(b);
+//
+let v1 = 9;
+if(v1%2==0){
+  console.log("Number is even");
+}
+else if(v1==0){
+  console.log("Number is zero");
+}
+else{
+  console.log("Number is odd");
+}
 
 
 
