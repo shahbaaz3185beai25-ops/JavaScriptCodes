@@ -328,6 +328,29 @@ else if(v1==0){
 else{
   console.log("Number is odd");
 }
+//
+let c1 = 89;
+if(c1 ==0){
+  console.log("Zero");
+}
+else{
+  if(c1 > 0){
+    if(c1%2==0){
+      console.log("Positive and Even");
+    }
+    else{
+      console.log("Positive and Odd");
+    }
+  }
+  else if(c1< 0){
+    if (c1%2==0){
+      console.log("Negitive and Even");
+    }
+    else{
+      console.log("Negitive and Odd");
+    }
+  }
+}
 
 
 
