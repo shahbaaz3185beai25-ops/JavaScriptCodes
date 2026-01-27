@@ -351,6 +351,33 @@ else{
     }
   }
 }
+//
+let num = 10;
+if (num > 0) {
+  if (num % 2 === 0) {
+    console.log("Positive even number");
+  } else {
+    console.log("Positive odd number");
+  }
+} else if (num < 0) {
+  console.log("Negative number");
+} else {
+  console.log("Zero");
+}
+//
+let c2 = 89;
+if (c2 == 0) {
+  console.log("Zero");
+} else if (c2 > 0 && c2 % 2 == 0) {
+  console.log("Positive and Even");
+} else if (c2 > 0 && c2 % 2 != 0) {
+  console.log("Positive and Odd");
+} else if (c2 < 0 && c2 % 2 == 0) {
+  console.log("Negative and Even");  
+} else if (c2 < 0 && c2 % 2 != 0) {
+  console.log("Negative and Odd");
+}
+
 
 
 
