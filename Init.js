@@ -385,7 +385,15 @@ do {
   ipq++;
 } while (i <= 5);
 //
-
+let k = 0;
+let txt = "";
+do{
+  text+="Number is "+ k;
+  k++;
+}
+while(k<10){
+  console.log(txt);
+}
 
 
 
