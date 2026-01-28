@@ -398,7 +398,12 @@ do{
 }
 while(f<10);
 //
-
+const cars = ["BMW", "Volvo", "Saab", "Ford"];
+let r_h = 0;
+while(r_h<cars.length){
+  console.log(cars[r_h]);
+  r_h++;
+}
 
 
 
