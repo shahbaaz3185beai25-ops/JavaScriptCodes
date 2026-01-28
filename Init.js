@@ -383,17 +383,24 @@ let ipq = 1;
 do {
   console.log(ipq);
   ipq++;
-} while (i <= 5);
+} while (ipq <= 5);
 //
-let k = 0;
-let txt = "";
+let h = 0 ;
+while (h<10){
+  console.log("Num:"+ h);
+  h++;
+}
+//
+let f = 0;
 do{
-  text+="Number is "+ k;
-  k++;
+  console.log("Good"+f);
+  f++;
 }
-while(k<10){
-  console.log(txt);
-}
+while(f<10);
+//
+
+
+
 
 
 
