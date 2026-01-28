@@ -404,6 +404,12 @@ while(r_h<cars.length){
   console.log(cars[r_h]);
   r_h++;
 }
+//
+let iko = 0;
+while (iko <= 10) {
+    console.log(iko);
+    iko += 2;
+}
 
 
 
