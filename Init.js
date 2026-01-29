@@ -430,6 +430,11 @@ while(f_oq<car_s.length){
   console.log(car_s[f_oq]);
   f_oq ++;
 }
+//
+for (let f_oj = 0; f_oj<=2; f_oj++){
+  console.log(f_oj+"Hello World");
+}
+
 
 
 
