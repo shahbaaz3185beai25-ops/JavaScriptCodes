@@ -434,6 +434,11 @@ while(f_oq<car_s.length){
 for (let f_oj = 0; f_oj<=2; f_oj++){
   console.log(f_oj+"Hello World");
 }
+// 
+for(let f_oy=0;f_oy<=9;f_oy++){
+  console.log("JavaScript is Good");
+}
+
 
 
 
