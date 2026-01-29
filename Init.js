@@ -420,7 +420,16 @@ for (let i =10; i>=0; --i){
   
 }
 
-
+//
+const car_s=["a","b","c","d","e"];
+for ( let f_op=0;f_op<=cars.length;f_op++){
+  console.log(car_s[f_op]);
+}
+let f_oq = 0;
+while(f_oq<car_s.length){
+  console.log(car_s[f_oq]);
+  f_oq ++;
+}
 
 
 
