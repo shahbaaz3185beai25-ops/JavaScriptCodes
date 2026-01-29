@@ -412,6 +412,9 @@ while (iko <= 10) {
 }
 
 
+for (let r_op = 0; r_op<=10;r_op++){
+  console.log("13 * ", r_op, "==", r_op*13)
+}
 
 
 
