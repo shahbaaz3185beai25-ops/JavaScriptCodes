@@ -444,6 +444,14 @@ while(g_op<=10){
   g_op++;
 }
 
+let s_oi=12321;
+let rs_oi=s_oi.toString();
+let original_oi=rs_oi.split('').reverse().join('');
+console.log(original_oi==s_oi);
+
+
+
+
 
 
 
