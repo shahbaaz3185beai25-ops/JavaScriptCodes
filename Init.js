@@ -438,7 +438,11 @@ for (let f_oj = 0; f_oj<=2; f_oj++){
 for(let f_oy=0;f_oy<=9;f_oy++){
   console.log("JavaScript is Good");
 }
-
+let g_op=0;
+while(g_op<=10){
+  console.log(g_op);
+  g_op++;
+}
 
 
 
