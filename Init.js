@@ -516,12 +516,12 @@ console.log(tot);
 let a_s = [4]; a_s.unshift(1); 
 console.log(a_s);
 //
-let i = 1;
+let i_uip = 1;
 
 do {
-  console.log(i);
-  i++;
-} while (i <= 5);
+  console.log(i_uip);
+  i_uip++;
+} while (i_uip <= 5);
 //
 
 
