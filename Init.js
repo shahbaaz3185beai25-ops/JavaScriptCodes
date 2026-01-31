@@ -512,6 +512,17 @@ for (let f_de of g_oi){
   tot+=f_de;
 }
 console.log(tot);
+//
+let a_s = [4]; a_s.unshift(1); 
+console.log(a_s);
+//
+let i = 1;
+
+do {
+  console.log(i);
+  i++;
+} while (i <= 5);
+//
 
 
 
