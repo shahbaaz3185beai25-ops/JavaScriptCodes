@@ -473,6 +473,19 @@ for (let i in numbers) {
 for (let val of numbers) {
   console.log(val); // 10, 20, 30
 }
+//
+const user = { name: "Alice", age: 25 };
+for (let key in user) { console.log(key); }
+//
+const arr = ['a', 'b'];
+for (let i of arr) { console.log(i, typeof i); }
+//
+const furis={a:"v",b:"w",c:"v",d:"x",e:"a",k:"t"};
+var c_ount = 0;
+for (let i in furis){
+  console.log(i);
+  c_ount++;
+}
 
 
 
