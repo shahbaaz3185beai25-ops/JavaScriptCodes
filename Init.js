@@ -456,7 +456,11 @@ const cars_d={a:"MS",b:"BH"};
 for (let key in cars_d){
   console.log(key+":"+cars_d[key]);
 }
-
+//
+const cars_id=["red","blue","pink"];
+for ( let key_op of cars_id){
+  console.log(key_op);
+}
 
 
 
