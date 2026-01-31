@@ -448,6 +448,14 @@ let s_oi=12321;
 let rs_oi=s_oi.toString();
 let original_oi=rs_oi.split('').reverse().join('');
 console.log(original_oi==s_oi);
+//
+const hello = () => "Hi JS!"; console.log(hello());
+//
+const cars_d={a:"MS",b:"BH"};
+
+for (let key in cars_d){
+  console.log(key+":"+cars_d[key]);
+}
 
 
 
