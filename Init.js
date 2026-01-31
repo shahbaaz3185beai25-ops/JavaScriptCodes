@@ -486,6 +486,32 @@ for (let i in furis){
   console.log(i);
   c_ount++;
 }
+//
+const data = { id: 101, name: "Admin", code: 404 };
+for (let k in data) { 
+    if (typeof data[k] === 'number') console.log(k); 
+}
+//
+const info = { city: "New York", zip: "10001" };
+let res = "";
+for (let k in info) {
+  console.log(k);
+}
+//
+const h_io = ['s','k','j'];
+for (let g_io in h_io){
+  console.log(g_io); //returns indices;
+}
+//
+const fruits_opi = ["🍎", "🍌"];
+for (let f of fruits_opi) { console.log(f); }
+//
+let g_oi = [20,90];
+let tot = 0;
+for (let f_de of g_oi){
+  tot+=f_de;
+}
+console.log(tot);
 
 
 
