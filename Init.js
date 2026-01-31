@@ -461,6 +461,18 @@ const cars_id=["red","blue","pink"];
 for ( let key_op of cars_id){
   console.log(key_op);
 }
+//
+const numbers = [10, 20, 30];
+
+// for...in (Returns index)
+for (let i in numbers) {
+  console.log(i); // "0", "1", "2"
+}
+
+// for...of (Returns value)
+for (let val of numbers) {
+  console.log(val); // 10, 20, 30
+}
 
 
 
