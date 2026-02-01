@@ -533,11 +533,35 @@ for (let key in user_op) {
 const score_s = { math: 90, _internalId: "882", eng: 85 };
 
 for (let sub in score_s) {
-    if (sub.startsWith("_")) continue; // Skip keys starting with underscore
+    if (sub.startsWith("_")){ continue}; // Skip keys starting with underscore
     console.log(sub + ": " + score_s[sub]);
     console.log(typeof(sub));
 }
 // Output: math: 90, eng: 85
+
+ 
+let counts = 0;
+let j = 0;    
+
+while (j < 10) {
+    j++; 
+
+    
+    if (j % 2 !== 0) {
+        continue;
+    }
+
+  
+    counts++;
+
+    
+    if (counts === 3) {
+        break;
+    }
+
+    
+    console.log(j);
+}
 
 
 
