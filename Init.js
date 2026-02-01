@@ -523,6 +523,22 @@ do {
   i_uip++;
 } while (i_uip <= 5);
 //
+const user_op = { name: "Alice", age: 25, city: "London", role: "Admin" };
+
+for (let key in user_op) {
+    if (key === "city") break; 
+    console.log(key);
+}
+//
+const score_s = { math: 90, _internalId: "882", eng: 85 };
+
+for (let sub in score_s) {
+    if (sub.startsWith("_")) continue; // Skip keys starting with underscore
+    console.log(sub + ": " + score_s[sub]);
+    console.log(typeof(sub));
+}
+// Output: math: 90, eng: 85
+
 
 
 
