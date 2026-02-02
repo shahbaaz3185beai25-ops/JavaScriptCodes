@@ -562,6 +562,11 @@ while (j < 10) {
     
     console.log(j);
 }
+//
+console.warn("Warning");
+//
+console.warn("This is a warning!");
+console.warn({ deprecated: "Old API used" });
 
 
 
