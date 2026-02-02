@@ -567,7 +567,8 @@ console.warn("Warning");
 //
 console.warn("This is a warning!");
 console.warn({ deprecated: "Old API used" });
-
+//
+console.error("Error occurred");
 
 
 
