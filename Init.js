@@ -569,7 +569,11 @@ console.warn("This is a warning!");
 console.warn({ deprecated: "Old API used" });
 //
 console.error("Error occurred");
-
+//
+const uss=[{a:"l",m:"o"},
+  {x:"h",h:"x"}
+];
+console.table(uss);
 
 
 
