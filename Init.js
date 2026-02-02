@@ -574,6 +574,10 @@ const uss=[{a:"l",m:"o"},
   {x:"h",h:"x"}
 ];
 console.table(uss);
+//
+for(let g = 0; g<=10 ; g++){
+  console.log("JavaScript has for loop ");
+}
 
 
 
