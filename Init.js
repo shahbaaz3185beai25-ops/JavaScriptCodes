@@ -578,8 +578,20 @@ console.table(uss);
 for(let g = 0; g<=10 ; g++){
   console.log("JavaScript has for loop ");
 }
-
-
+//
+for(let i=3; i>=1; i--){
+  let row = "";
+  for(let j=1; j<=i; j++){ row += "*";}
+  console.log(row);
+}
+//
+for(let i_er = 1; i_er<3; i_er ++ ){
+  let row = "";
+  for(let j_er=1;j_er<3;j_er++){
+    row+="*";
+  }
+  console.log(row);
+}
 
 
 
