@@ -1,5 +1,5 @@
 // Array length check
-/* let items = [1, 2, 3];
+ let items = [1, 2, 3];
 let message = items.length > 0 ? " Non-empty List " : "Empty list";
 console.log(message); 
 //
@@ -591,7 +591,7 @@ for(let i_er = 1; i_er<3; i_er ++ ){
     row+="*";
   }
   console.log(row);
-}*/
+}
 //
 let arra=[1,2,3,4];
 for(let i_uio =0 ; i_uio<arra.length;i_uio++){
