@@ -1,5 +1,5 @@
 // Array length check
-let items = [1, 2, 3];
+/* let items = [1, 2, 3];
 let message = items.length > 0 ? " Non-empty List " : "Empty list";
 console.log(message); 
 //
@@ -591,17 +591,19 @@ for(let i_er = 1; i_er<3; i_er ++ ){
     row+="*";
   }
   console.log(row);
+}*/
+//
+let arra=[1,2,3,4];
+for(let i_uio =0 ; i_uio<arra.length;i_uio++){
+  console.log(arra[i_uio]);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
+//
+const fruits__op=['B','o','A','M'];
+fruits__op.push("p");
+console.log(fruits__op);
+//
+const g = [1,2,3];
+const f_opi = [4,5,6];
+const r_opu = [7,8,9];
+const hv = g.concat(f_opi,r_opu);
+console.log(hv);
