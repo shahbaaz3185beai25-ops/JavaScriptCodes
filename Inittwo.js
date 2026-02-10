@@ -19,3 +19,27 @@ let arr1 = [1,2,3,4,5];
 let arr2 = [1,3,4,6,4,2,1];
 let arr3 = [9,8,6] ;
 console.log(arr1 , arr2 , arr3);*/
+//
+// 
+let n = parseInt(prompt("Enter the size of the square (number):"));
+
+if (n < 1) {
+  console.log("Number must be at least 1.");
+} else {
+  let output = "";
+
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= n; j++) {
+      
+      if (i === 1 || i === n || j === 1 || j === n) {
+        output += "* ";
+      } else {
+        output += "  ";  
+      }
+    }
+    output += "\n";
+  }
+
+  console.log(output);
+}
+//
