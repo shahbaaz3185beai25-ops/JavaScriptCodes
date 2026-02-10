@@ -43,3 +43,11 @@ if (n < 1) {
   console.log(output);
 }
 //
+let i,j
+let row ="";
+let obj ={"Name":"Shah","age":"25"};
+console.log(obj);
+let obj2={...obj,"age":277};
+for(const key in obj2){
+    let element = obj2[key];
+}
