@@ -64,3 +64,25 @@ console.log(obj2)
 function sum(...name1){
     console.log(name1);
 }
+//
+str = "Shah";
+
+function reverseStringRecursive(str, index = 0) {
+    
+    if (index >= str.length) {
+        return '';
+    }
+    
+    return reverseStringRecursive(str, index + 1) + str[index];
+}
+
+
+const inputString = prompt("Enter a string to reverse:");
+if (inputString !== null && inputString !== '') {
+    const reversed = reverseStringRecursive(inputString);
+    console.log(`Original: ${inputString}`);
+    console.log(`Reversed: ${reversed}`);
+    alert(`Original: ${inputString}\nReversed: ${reversed}`);
+} else {
+    console.log("No input provided.");
+}
