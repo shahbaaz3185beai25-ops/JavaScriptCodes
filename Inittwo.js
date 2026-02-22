@@ -1,5 +1,5 @@
-const prompt =require('prompt-sync')({sigint : true});
-/*const name = prompt("What is your name? ");
+/* const prompt =require('prompt-sync')({sigint : true});
+const name = prompt("What is your name? ");
 console.log(`Hey there ${name}`);
 const num = prompt("enter a number ");
 console.log("Your number + 4 = ");
@@ -89,7 +89,7 @@ if (inputString !== null && inputString !== '') {
 //
 //
 // Arrow function to concatenate first and last name
-const getFullName = (firstName, lastName) => `${firstName} ${lastName}`;
+/*const getFullName = (firstName, lastName) => `${firstName} ${lastName}`;*/
 
 // Example usage:
 /* let firstName = prompt("Enter your first name:");
@@ -97,8 +97,8 @@ let lastName = prompt("Enter your last name:");
 
 let fullName = getFullName(firstName, lastName);
 console.log("Your full name is: " + fullName); */
-
+/*
 const nums = [5, 6, 7];
 const multiplied = nums.map((n, i) => n * i);
-console.log(multiplied); // [0, 6, 14]
+console.log(multiplied); // [0, 6, 14] */
 
