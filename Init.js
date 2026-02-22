@@ -1,5 +1,5 @@
 // Array length check
- let items = [1, 2, 3];
+ /*let items = [1, 2, 3];
 let message = items.length > 0 ? " Non-empty List " : "Empty list";
 console.log(message); 
 //
@@ -607,3 +607,4 @@ const f_opi = [4,5,6];
 const r_opu = [7,8,9];
 const hv = g.concat(f_opi,r_opu);
 console.log(hv);
+*/
