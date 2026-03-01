@@ -371,4 +371,187 @@ switch(d30) {
     case "6": console.log("Example 30 Output: Win!"); break; 
     default: console.log("Example 30 Output: Try again"); 
 }
+// --- EXAMPLE 1: Increment ---
+let n1 = Number(prompt("1. Limit:"));
+for (let i = 0; i < n1; i++) console.log("Out: " + i);
+// Input: 3
+// Output: 0, 1, 2
 
+// --- EXAMPLE 2: Decrement ---
+let n2 = Number(prompt("2. Start:"));
+for (let i = n2; i > 0; i--) console.log("Out: " + i);
+// Input: 3
+// Output: 3, 2, 1
+
+// --- EXAMPLE 3: Multiplication ---
+let n3 = Number(prompt("3. Table:"));
+for (let i = 1; i <= 10; i++) console.log(n3 + "x" + i + "=" + (n3 * i));
+// Input: 5
+// Output: 5x1=5 ... 5x10=50
+
+// --- EXAMPLE 4: Even Step ---
+let n4 = Number(prompt("4. Max:"));
+for (let i = 0; i <= n4; i += 2) console.log("Even: " + i);
+// Input: 4
+// Output: 0, 2, 4
+
+// --- EXAMPLE 5: Total Sum ---
+let n5 = Number(prompt("5. Sum:"), s5 = 0);
+for (let i = 1; i <= n5; i++) s5 += i;
+console.log("Total: " + s5);
+// Input: 4
+// Output: 10
+
+// --- EXAMPLE 6: Array Loop ---
+let a6 = ["A", "B", "C"];
+for (let i = 0; i < a6.length; i++) console.log("Item: " + a6[i]);
+// Input: None
+// Output: A, B, C
+
+// --- EXAMPLE 7: Binary Growth ---
+let n7 = Number(prompt("7. Max:"));
+for (let i = 1; i <= n7; i *= 2) console.log("Val: " + i);
+// Input: 8
+// Output: 1, 2, 4, 8
+
+// --- EXAMPLE 8: String Index ---
+let s8 = prompt("8. Word:");
+for (let i = 0; i < s8.length; i++) console.log(s8[i]);
+// Input: "Hi"
+// Output: H, i
+
+// --- EXAMPLE 9: Early Exit ---
+for (let i = 1; i < 5; i++) if (i === 3) break; else console.log(i);
+// Input: None
+// Output: 1, 2
+
+// --- EXAMPLE 10: Skip Value ---
+for (let i = 1; i < 4; i++) if (i === 2) continue; else console.log(i);
+// Input: None
+// Output: 1, 3
+
+// --- EXAMPLE 11: Factorial Calc ---
+let n11 = Number(prompt("11. n:"), r11 = 1);
+for (let i = n11; i > 1; i--) r11 *= i;
+console.log(r11);
+// Input: 3
+// Output: 6
+
+// --- EXAMPLE 12: List Fill ---
+let a12 = [];
+for (let i = 0; i < 3; i++) a12.push(i);
+console.log(a12);
+// Input: None
+// Output: [0, 1, 2]
+
+// --- EXAMPLE 13: Flip String ---
+let s13 = prompt("13. In:"), v13 = "";
+for (let i = s13.length - 1; i >= 0; i--) v13 += s13[i];
+console.log(v13);
+// Input: "Up"
+// Output: "pU"
+
+// --- EXAMPLE 14: Find Smallest ---
+let a14 = [9, 2, 5], m14 = a14[0];
+for (let i = 1; i < 3; i++) if (a14[i] < m14) m14 = a14[i];
+console.log(m14);
+// Input: None
+// Output: 2
+
+// --- EXAMPLE 15: Vowel Match ---
+let s15 = prompt("15. Str:"), c15 = 0;
+for (let i = 0; i < s15.length; i++) if ("aei".includes(s15[i])) c15++;
+console.log(c15);
+// Input: "ace"
+// Output: 2
+
+// --- EXAMPLE 16: Star Line ---
+let n16 = Number(prompt("16. n:"), l16 = "");
+for (let i = 0; i < n16; i++) l16 += "*";
+console.log(l16);
+// Input: 3
+// Output: ***
+
+// --- EXAMPLE 17: Ternary Fizz ---
+for (let i = 1; i < 4; i++) console.log(i % 3 === 0 ? "F" : i);
+// Input: None
+// Output: 1, 2, F
+
+// --- EXAMPLE 18: Object Keys ---
+let o18 = {a: 1, b: 2}, k18 = Object.keys(o18);
+for (let i = 0; i < 2; i++) console.log(k18[i]);
+// Input: None
+// Output: a, b
+
+// --- EXAMPLE 19: Dual Counter ---
+for (let i = 0, j = 2; i <= j; i++, j--) console.log(i, j);
+// Input: None
+// Output: 0 2, 1 1
+
+// --- EXAMPLE 20: Big Step ---
+for (let i = 10; i >= 0; i -= 5) console.log(i);
+// Input: None
+// Output: 10, 5, 0
+
+// --- EXAMPLE 21: Grid Log ---
+for (let i = 0; i < 2; i++) for (let j = 0; j < 1; j++) console.log(i, j);
+// Input: None
+// Output: 0 0, 1 0
+
+// --- EXAMPLE 22: Not Array ---
+let a22 = [true, false];
+for (let i = 0; i < 2; i++) console.log(!a22[i]);
+// Input: None
+// Output: false, true
+
+// --- EXAMPLE 23: Average Set ---
+let a23 = [1, 3], t23 = 0;
+for (let i = 0; i < 2; i++) t23 += a23[i];
+console.log(t23 / 2);
+// Input: None
+// Output: 2
+
+// --- EXAMPLE 24: Percentage ---
+let a24 = [0.1, 0.2];
+for (let i = 0; i < 2; i++) console.log(a24[i] * 100 + "%");
+// Input: None
+// Output: 10%, 20%
+
+// --- EXAMPLE 25: Target Search ---
+let a25 = ["x", "y"], idx = -1;
+for (let i = 0; i < 2; i++) if (a25[i] === "y") idx = i;
+console.log(idx);
+// Input: None
+// Output: 1
+
+// --- EXAMPLE 26: Forced Break ---
+let c26 = 0;
+for (;;) { if (c26 === 1) break; console.log("Hi"); c26++; }
+// Input: None
+// Output: Hi
+
+// --- EXAMPLE 27: Char Mask ---
+let s27 = prompt("27. In:"), m27 = "";
+for (let i = 0; i < s27.length; i++) m27 += "X";
+console.log(m27);
+// Input: "ok"
+// Output: "XX"
+
+// --- EXAMPLE 28: String Build ---
+let s28 = "";
+for (let i = 1; i < 4; i++) console.log(s28 += i);
+// Input: None
+// Output: 1, 12, 123
+
+// --- EXAMPLE 29: Fib Start ---
+let f29 = [0, 1];
+for (let i = 2; i < 4; i++) f29[i] = f29[i - 1] + f29[i - 2];
+console.log(f29);
+// Input: None
+// Output: [0, 1, 1, 2]
+
+// --- EXAMPLE 30: Truth Filter ---
+let a30 = [0, 1, ""];
+for (let i = 0; i < 3; i++) if (a30[i]) console.log("T: " + a30[i]);
+// Input: None
+// Output: T: 1
