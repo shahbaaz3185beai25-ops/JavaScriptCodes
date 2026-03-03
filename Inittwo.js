@@ -557,38 +557,191 @@ for (let i = 0; i < 3; i++) if (a30[i]) console.log("T: " + a30[i]);
 // Input: None
 // Output: T: 1 */
 /*
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// --- EXAMPLE 1: Basic Counter ---
+let i1 = 0, n1 = Number(prompt("1. Limit:"));
+while (i1 < n1) console.log("Out: " + i1++);
+// Input: 3
+// Output: 0, 1, 2
 
-function App() {
-  const [count, setCount] = useState(0)
+// --- EXAMPLE 2: Reverse Count ---
+let i2 = Number(prompt("2. Start:"));
+while (i2 > 0) console.log("Out: " + i2--);
+// Input: 3
+// Output: 3, 2, 1
 
-  return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+// --- EXAMPLE 3: Sum of N ---
+let i3 = 1, n3 = Number(prompt("3. Sum up to:"), s3 = 0);
+while (i3 <= n3) s3 += i3++;
+console.log("Total: " + s3);
+// Input: 4
+// Output: 10
 
-export default App*/
+// --- EXAMPLE 4: Even Numbers ---
+let i4 = 0, n4 = Number(prompt("4. Max:"));
+while (i4 <= n4) { if (i4 % 2 === 0) console.log(i4); i4++; }
+// Input: 4
+// Output: 0, 2, 4
+
+// --- EXAMPLE 5: Multiplication Table ---
+let i5 = 1, n5 = Number(prompt("5. Table of:"));
+while (i5 <= 10) { console.log(n5 + "x" + i5 + "=" + (n5 * i5)); i5++; }
+// Input: 2
+// Output: 2x1=2 ... 2x10=20
+
+// --- EXAMPLE 6: Factorial ---
+let n6 = Number(prompt("6. Fact of:"), r6 = 1);
+while (n6 > 1) r6 *= n6--;
+console.log(r6);
+// Input: 4
+// Output: 24
+
+// --- EXAMPLE 7: Power of 2 ---
+let i7 = 1, n7 = Number(prompt("7. Max val:"));
+while (i7 <= n7) { console.log(i7); i7 *= 2; }
+// Input: 10
+// Output: 1, 2, 4, 8
+
+// --- EXAMPLE 8: Skip Odds ---
+let i8 = 0, n8 = Number(prompt("8. Max:"));
+while (i8 <= n8) { if (i8 % 2 === 0) console.log(i8); i8++; }
+// Input: 5
+// Output: 0, 2, 4
+
+// --- EXAMPLE 9: User Input Validation ---
+let n9 = 0;
+while (n9 <= 0) n9 = Number(prompt("9. Enter positive num:"));
+console.log("Valid: " + n9);
+// Input: -1, 5
+// Output: Valid: 5
+
+// --- EXAMPLE 10: Fibonacci Sequence ---
+let a10 = 0, b10 = 1, i10 = 0, n10 = Number(prompt("10. Steps:"));
+while (i10 < n10) { console.log(a10); let t = a10 + b10; a10 = b10; b10 = t; i10++; }
+// Input: 3
+// Output: 0, 1, 1
+
+// --- EXAMPLE 11: Digit Extraction (Modulus) ---
+let n11 = Number(prompt("11. Num:"));
+while (n11 > 0) { console.log(n11 % 10); n11 = Math.floor(n11 / 10); }
+// Input: 123
+// Output: 3, 2, 1
+
+// --- EXAMPLE 12: Sum of Digits ---
+let n12 = Number(prompt("12. Num:"), s12 = 0);
+while (n12 > 0) { s12 += n12 % 10; n12 = Math.floor(n12 / 10); }
+console.log(s12);
+// Input: 15
+// Output: 6
+
+// --- EXAMPLE 13: Binary Search Logic (Half) ---
+let n13 = Number(prompt("13. Start:"));
+while (n13 > 1) { console.log(n13); n13 = Math.floor(n13 / 2); }
+// Input: 10
+// Output: 10, 5, 2
+
+// --- EXAMPLE 14: Guessing Game Logic ---
+let secret = 7, guess = 0;
+while (guess !== secret) guess = Number(prompt("14. Guess (1-10):"));
+console.log("Correct!");
+// Input: 2, 7
+// Output: Correct!
+
+// --- EXAMPLE 15: Odd Counter ---
+let i15 = 1, n15 = Number(prompt("15. Max:"));
+while (i15 <= n15) { console.log(i15); i15 += 2; }
+// Input: 5
+// Output: 1, 3, 5
+
+// --- EXAMPLE 16: Multiples of 3 ---
+let i16 = 3, n16 = Number(prompt("16. Max:"));
+while (i16 <= n16) { console.log(i16); i16 += 3; }
+// Input: 10
+// Output: 3, 6, 9
+
+// --- EXAMPLE 17: Infinite with Break ---
+let i17 = 0;
+while (true) { if (i17 === 2) break; console.log("Run"); i17++; }
+// Input: None
+// Output: Run, Run
+
+// --- EXAMPLE 18: Decrement by 5 ---
+let i18 = 20;
+while (i18 >= 0) { console.log(i18); i18 -= 5; }
+// Input: None
+// Output: 20, 15, 10, 5, 0
+
+// --- EXAMPLE 19: Double Counter ---
+let x19 = 1, y19 = 10;
+while (x19 < y19) { console.log(x19 + "-" + y19); x19++; y19--; }
+// Input: None
+// Output: 1-10, 2-9, 3-8, 4-7, 5-6
+
+// --- EXAMPLE 20: Compound Interest Logic ---
+let bal20 = 100, i20 = 0;
+while (i20 < 3) { bal20 *= 1.1; i20++; }
+console.log(bal20);
+// Input: None
+// Output: 133.1
+
+// --- EXAMPLE 21: Find GCD Logic ---
+let a21 = 12, b21 = 8;
+while (a21 !== b21) { if (a21 > b21) a21 -= b21; else b21 -= a21; }
+console.log(a21);
+// Input: None
+// Output: 4
+
+// --- EXAMPLE 22: Square Numbers ---
+let i22 = 1, n22 = Number(prompt("22. Max:"));
+while (i22 * i22 <= n22) { console.log(i22 * i22); i22++; }
+// Input: 20
+// Output: 1, 4, 9, 16
+
+// --- EXAMPLE 23: Average Inputs ---
+let sum23 = 0, count23 = 0, input23 = 1;
+while (count23 < 2) { input23 = Number(prompt("23. Num:")); sum23 += input23; count23++; }
+console.log(sum23 / 2);
+// Input: 10, 20
+// Output: 15
+
+// --- EXAMPLE 24: Power of N ---
+let base = 2, exp = 3, res24 = 1;
+while (exp > 0) { res24 *= base; exp--; }
+console.log(res24);
+// Input: None
+// Output: 8
+
+// --- EXAMPLE 25: Password Attempts ---
+let pass25 = 0, tries25 = 0;
+while (pass25 !== 123 && tries25 < 2) { pass25 = Number(prompt("25. Pin:")); tries25++; }
+// Input: 111, 222
+// Output: (Loop ends after 2 tries)
+
+// --- EXAMPLE 26: Divisibility Check ---
+let i26 = 1;
+while (i26 <= 10) { if (i26 % 4 === 0) console.log(i26); i26++; }
+// Input: None
+// Output: 4, 8
+
+// --- EXAMPLE 27: Ternary in While ---
+let i27 = 1;
+while (i27 <= 3) console.log(i27++ % 2 === 0 ? "Even" : "Odd");
+// Input: None
+// Output: Odd, Even, Odd
+
+// --- EXAMPLE 28: Count to Neg ---
+let i28 = 2;
+while (i28 >= -1) console.log(i28--);
+// Input: None
+// Output: 2, 1, 0, -1
+
+// --- EXAMPLE 29: Simple Progress ---
+let p29 = 0;
+while (p29 < 100) { p29 += 40; console.log(p29 + "%"); }
+// Input: None
+// Output: 40%, 80%, 120%
+
+// --- EXAMPLE 30: Final Countdown ---
+let i30 = 3;
+while (i30 >= 0) { console.log(i30 === 0 ? "Go!" : i30); i30--; }
+// Input: None
+// Output: 3, 2, 1, Go! */
