@@ -1023,4 +1023,185 @@ nest29();
     }
 }
 // Input: None
-// Output: 3*/
+// Output: 3
+// // --- EXAMPLE 1: Regular Function inside Object ---
+const obj1 = {
+    name: "Regular",
+    greet: function() {
+        // Regular function has its own 'this' pointing to obj1
+        return this.name;
+    }
+};
+console.log(obj1.greet());
+// Input: None
+// Output: Regular
+
+// --- EXAMPLE 2: Arrow Function as Object Method ---
+const obj2 = {
+    name: "Arrow",
+    greet: () => {
+        // Parent scope is Global (Window/Global Object)
+        return this.name;
+    }
+};
+console.log(obj2.greet());
+// Input: None
+// Output: undefined (or empty string in some environments)
+
+// --- EXAMPLE 3: setTimeout with Regular Function ---
+const obj3 = {
+    val: 10,
+    run: function() {
+        setTimeout(function() {
+            // Regular function resets 'this' to Global/Timeout
+            console.log("Reg: " + this.val);
+        }, 100);
+    }
+};
+obj3.run();
+// Input: None
+// Output: Reg: undefined
+
+// --- EXAMPLE 4: setTimeout with Arrow Function ---
+const obj4 = {
+    val: 20,
+    run: function() {
+        setTimeout(() => {
+            // Arrow function inherits 'this' from run()
+            console.log("Arrow: " + this.val);
+        }, 100);
+    }
+};
+obj4.run();
+// Input: None
+// Output: Arrow: 20
+
+// --- EXAMPLE 5: Nested Functions (Regular) ---
+const obj5 = {
+    count: 5,
+    doMath: function() {
+        function inner() { return this.count; }
+        return inner(); // Called as a plain function, 'this' is lost
+    }
+};
+console.log(obj5.doMath());
+// Input: None
+// Output: undefined
+
+// --- EXAMPLE 6: Nested Functions (Arrow) ---
+const obj6 = {
+    count: 10,
+    doMath: function() {
+        const inner = () => { return this.count; };
+        return inner(); // Inherits 'this' from doMath
+    }
+};
+console.log(obj6.doMath());
+// Input: None
+// Output: 10
+
+// --- EXAMPLE 7: Array Method with Regular Function ---
+const obj7 = {
+    factor: 2,
+    nums: [1, 2],
+    calc: function() {
+        return this.nums.map(function(n) {
+            return n * this.factor; // 'this' is lost inside map callback
+        });
+    }
+};
+console.log(obj7.calc()[0]);
+// Input: None
+// Output: NaN
+
+// --- EXAMPLE 8: Array Method with Arrow Function ---
+const obj8 = {
+    factor: 3,
+    nums: [1, 2],
+    calc: function() {
+        return this.nums.map((n) => {
+            return n * this.factor; // Inherits 'this' from calc
+        });
+    }
+};
+console.log(obj8.calc()[0]);
+// Input: None
+// Output: 3
+
+// --- EXAMPLE 9: Event Listener Simulation (Regular) ---
+const btnReg = {
+    label: "Submit",
+    init: function() {
+        // In real DOM, 'this' would be the button element
+        const fakeClick = function() { console.log(this.label); };
+        fakeClick();
+    }
+};
+btnReg.init();
+// Input: None
+// Output: undefined
+
+// --- EXAMPLE 10: Event Listener Simulation (Arrow) ---
+const btnArrow = {
+    label: "Send",
+    init: function() {
+        const fakeClick = () => { console.log(this.label); };
+        fakeClick();
+    }
+};
+btnArrow.init();
+// Input: None
+// Output: Send
+
+// --- EXAMPLE 11: Constructor-like Object (Regular) ---
+function Counter() {
+    this.num = 0;
+    this.timer = function() {
+        setTimeout(function() {
+            this.num++; // Fails: 'this' is not the Counter instance
+            console.log("Reg: " + this.num);
+        }, 10);
+    };
+}
+const c1 = new Counter();
+c1.timer();
+// Output: Reg: NaN
+
+// --- EXAMPLE 12: Constructor-like Object (Arrow) ---
+function CounterArr() {
+    this.num = 100;
+    this.timer = function() {
+        setTimeout(() => {
+            this.num++; // Success: 'this' is the CounterArr instance
+            console.log("Arrow: " + this.num);
+        }, 10);
+    };
+}
+const c2 = new CounterArr();
+c2.timer();
+// Output: Arrow: 101
+
+// --- EXAMPLE 13: Manual 'this' Binding (Regular) ---
+const person13 = {
+    name: "Ali",
+    show: function() {
+        const self = this; // Old way to save 'this'
+        setTimeout(function() {
+            console.log(self.name);
+        }, 5);
+    }
+};
+person13.show();
+// Output: Ali
+
+// --- EXAMPLE 14: Lexical 'this' (Modern way) ---
+const person14 = {
+    name: "Sara",
+    show: function() {
+        setTimeout(() => {
+            console.log(this.name); // No need for 'self = this'
+        }, 5);
+    }
+};
+person14.show();
+// Output: Sara*/
