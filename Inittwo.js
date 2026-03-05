@@ -744,4 +744,283 @@ while (p29 < 100) { p29 += 40; console.log(p29 + "%"); }
 let i30 = 3;
 while (i30 >= 0) { console.log(i30 === 0 ? "Go!" : i30); i30--; }
 // Input: None
-// Output: 3, 2, 1, Go! */
+// Output: 3, 2, 1, Go! 
+// // --- EXAMPLE 1: Global Scope Access ---
+let global1 = "I am global";
+function showGlobal() {
+    console.log(global1);
+}
+showGlobal();
+// Input: None
+// Output: I am global
+
+// --- EXAMPLE 2: Local (Function) Scope ---
+function localScope() {
+    let local2 = "I am local";
+    console.log(local2);
+}
+localScope();
+// Input: None
+// Output: I am local
+
+// --- EXAMPLE 3: Block Scope (let) ---
+{
+    let block3 = "Inside block";
+    console.log(block3);
+}
+// console.log(block3); // Error: block3 is not defined
+// Input: None
+// Output: Inside block
+
+// --- EXAMPLE 4: Block Scope (const) ---
+if (true) {
+    const block4 = "Constant in block";
+    console.log(block4);
+}
+// Input: None
+// Output: Constant in block
+
+// --- EXAMPLE 5: Var in Block (No Block Scope) ---
+if (true) {
+    var notBlocked = "I escape blocks";
+}
+console.log(notBlocked);
+// Input: None
+// Output: I escape blocks
+
+// --- EXAMPLE 6: Function Parameter Scope ---
+function paramScope(p) {
+    console.log(p);
+}
+paramScope("Hello");
+// console.log(p); // Error: p is local to function
+// Input: "Hello"
+// Output: Hello
+
+// --- EXAMPLE 7: Global Variable Modification ---
+let count7 = 0;
+function update7() {
+    count7 = 10;
+}
+update7();
+console.log(count7);
+// Input: None
+// Output: 10
+
+// --- EXAMPLE 8: Shadowing (Global vs Local) ---
+let name8 = "GlobalName";
+function shadow8() {
+    let name8 = "LocalName";
+    console.log(name8);
+}
+shadow8();
+// Input: None
+// Output: LocalName
+
+// --- EXAMPLE 9: Shadowing (Global stays same) ---
+let val9 = 100;
+function check9() {
+    let val9 = 200;
+}
+check9();
+console.log(val9);
+// Input: None
+// Output: 100
+
+// --- EXAMPLE 10: Nested Function Scope ---
+function outer10() {
+    let outerVar = "Outer";
+    function inner10() {
+        console.log(outerVar);
+    }
+    inner10();
+}
+outer10();
+// Input: None
+// Output: Outer
+
+// --- EXAMPLE 11: Loop Block Scope (let) ---
+for (let i = 0; i < 2; i++) {
+    console.log(i);
+}
+// console.log(i); // Error: i is block scoped
+// Input: None
+// Output: 0, 1
+
+// --- EXAMPLE 12: Loop Scope (var) ---
+for (var j = 0; j < 2; j++) {
+    // Empty
+}
+console.log(j);
+// Input: None
+// Output: 2
+
+// --- EXAMPLE 13: Multiple Blocks ---
+{ let x = 1; }
+{ let x = 2; console.log(x); }
+// Input: None
+// Output: 2
+
+// --- EXAMPLE 14: Global Const ---
+const PI = 3.14;
+function getPI() {
+    return PI;
+}
+console.log(getPI());
+// Input: None
+// Output: 3.14
+
+// --- EXAMPLE 15: Re-declaration in Local ---
+let a15 = 5;
+function redo15() {
+    let a15 = 10;
+    a15 = 20;
+    console.log(a15);
+}
+redo15();
+// Input: None
+// Output: 20
+
+// --- EXAMPLE 16: Function Scope with var ---
+function varFunc() {
+    var x16 = "Function Scoped";
+}
+// console.log(x16); // Error: var is still local to functions
+// Input: None
+// Output: (ReferenceError)
+
+// --- EXAMPLE 17: If Block Scope ---
+let status17 = "Safe";
+if (true) {
+    let status17 = "Danger";
+    console.log(status17);
+}
+console.log(status17);
+// Input: None
+// Output: Danger, Safe
+
+// --- EXAMPLE 18: Global Object Property (Simplified) ---
+var globalVar18 = "VarGlobal";
+// In browsers, this appears in window.globalVar18
+console.log(globalVar18);
+// Input: None
+// Output: VarGlobal
+
+// --- EXAMPLE 19: Parameters vs Global ---
+let user19 = "Admin";
+function greet19(user19) {
+    console.log(user19);
+}
+greet19("Guest");
+// Input: "Guest"
+// Output: Guest
+
+// --- EXAMPLE 20: Lexical Scope Basic ---
+let x20 = "Outside";
+function outer20() {
+    function inner20() {
+        console.log(x20);
+    }
+    inner20();
+}
+outer20();
+// Input: None
+// Output: Outside
+
+// --- EXAMPLE 21: Changing Global inside Block ---
+let y21 = 5;
+if (true) {
+    y21 = 10; // No 'let' keyword, refers to global
+}
+console.log(y21);
+// Input: None
+// Output: 10
+
+// --- EXAMPLE 22: Const in Function ---
+function constFunc() {
+    const C = 50;
+    console.log(C);
+}
+constFunc();
+// Input: None
+// Output: 50
+
+// --- EXAMPLE 23: Block Scope in Switch ---
+let grade23 = "A";
+switch(grade23) {
+    case "A": {
+        let msg = "Great";
+        console.log(msg);
+        break;
+    }
+}
+// Input: None
+// Output: Great
+
+// --- EXAMPLE 24: Global Assignment without Declaration ---
+function ghost24() {
+    z24 = "I am unintended global"; 
+}
+ghost24();
+console.log(z24);
+// Input: None
+// Output: I am unintended global
+
+// --- EXAMPLE 25: Same Name in Different Blocks ---
+if (true) { let b = 1; }
+if (true) { let b = 2; console.log(b); }
+// Input: None
+// Output: 2
+
+// --- EXAMPLE 26: While Loop Block Scope ---
+let k26 = 0;
+while (k26 < 1) {
+    let blockK = "Looping";
+    console.log(blockK);
+    k26++;
+}
+// Input: None
+// Output: Looping
+
+// --- EXAMPLE 27: Shadowing with Const ---
+const val27 = "Outer";
+function check27() {
+    const val27 = "Inner";
+    console.log(val27);
+}
+check27();
+// Input: None
+// Output: Inner
+
+// --- EXAMPLE 28: Returning Local Variable ---
+function returnLocal() {
+    let secret = "Hidden";
+    return secret;
+}
+console.log(returnLocal());
+// Input: None
+// Output: Hidden
+
+// --- EXAMPLE 29: Block Scope inside Function ---
+function nest29() {
+    let a = 1;
+    if (true) {
+        let a = 2;
+        console.log(a);
+    }
+    console.log(a);
+}
+nest29();
+// Input: None
+// Output: 2, 1
+
+// --- EXAMPLE 30: Deeply Nested Blocks ---
+{
+    let level1 = 1;
+    {
+        let level2 = 2;
+        console.log(level1 + level2);
+    }
+}
+// Input: None
+// Output: 3*/
