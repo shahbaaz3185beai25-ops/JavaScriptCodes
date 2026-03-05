@@ -1363,4 +1363,110 @@ const timeGreet = (hour) => {
 };
 console.log(timeGreet(15));
 // Input: 15
-// Output: Evening*/
+// Output: Evening
+// // --- EXAMPLE 1: Hoisting (Declaration) ---
+// Declarations are hoisted, so they can be called before definition.
+console.log(greetDecl());
+
+function greetDecl() {
+    return "Hello from Declaration!";
+}
+// Input: None
+// Output: Hello from Declaration!
+
+// --- EXAMPLE 2: Hoisting (Expression) ---
+// Expressions are not hoisted; calling before definition causes an error.
+try {
+    console.log(greetExpr());
+} catch (e) {
+    console.log("Error: greetExpr is not defined yet");
+}
+
+const greetExpr = function() {
+    return "Hello from Expression!";
+};
+// Input: None
+// Output: Error: greetExpr is not defined yet
+
+// --- EXAMPLE 3: Syntax (Naming) ---
+// Declarations must have a name. Expressions can be anonymous.
+const anonymous = function() {
+    return "I am anonymous";
+};
+console.log(anonymous());
+
+function named() {
+    return "I am named";
+}
+console.log(named());
+// Input: None
+// Output: 
+// I am anonymous
+// I am named
+
+// --- EXAMPLE 4: Conditional Definition (Declarations) ---
+// Function declarations in blocks behave inconsistently across browsers.
+if (true) {
+    function test() { return "True Block"; }
+}
+console.log(test());
+// Input: None
+// Output: True Block
+
+// --- EXAMPLE 5: Conditional Definition (Expressions) ---
+// Expressions are safer for conditional logic because they follow block scope.
+let logic;
+if (true) {
+    logic = function() { return "Safe Expression"; };
+}
+console.log(logic());
+// Input: None
+// Output: Safe Expression
+
+// --- EXAMPLE 6: Use as Callbacks ---
+// Expressions are commonly passed directly into other functions.
+const nums = [1, 2];
+nums.forEach(function(n) {
+    console.log(n * 2);
+});
+// Input: [1, 2]
+// Output: 
+// 2
+// 4
+
+// --- EXAMPLE 7: Object Methods ---
+// Expressions are used to define methods inside objects.
+const person = {
+    talk: function() { return "Speaking..."; }
+};
+console.log(person.talk());
+// Input: None
+// Output: Speaking...
+
+// --- EXAMPLE 8: IIFE (Immediately Invoked Function Expression) ---
+// Only expressions can be used to create IIFEs.
+(function() {
+    console.log("Run immediately!");
+})();
+// Input: None
+// Output: Run immediately!
+
+// --- EXAMPLE 9: Reassignment ---
+// Expressions assigned to 'let' can be changed; declarations cannot be "reassigned" the same way.
+let dynamicFunc = function() { return "Version 1"; };
+dynamicFunc = function() { return "Version 2"; };
+console.log(dynamicFunc());
+// Input: None
+// Output: Version 2
+
+// --- EXAMPLE 10: The 'name' Property ---
+// Declarations have a fixed name property.
+function myOriginalName() {}
+const myAlias = function() {};
+
+console.log(myOriginalName.name);
+console.log(myAlias.name);
+// Input: None
+// Output: 
+// myOriginalName
+// myAlias*/
