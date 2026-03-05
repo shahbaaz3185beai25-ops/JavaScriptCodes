@@ -1469,4 +1469,301 @@ console.log(myAlias.name);
 // Input: None
 // Output: 
 // myOriginalName
-// myAlias*/
+// myAlias
+// // --- EXAMPLE 1: Factorial ---
+function fact(n) {
+    if (n <= 1) { return 1; }
+    return n * fact(n - 1);
+}
+console.log(fact(5));
+// Input: 5
+// Output: 120
+
+// --- EXAMPLE 2: Fibonacci Number ---
+function fibo(n) {
+    if (n <= 1) { return n; }
+    return fibo(n - 1) + fibo(n - 2);
+}
+console.log(fibo(6));
+// Input: 6
+// Output: 8
+
+// --- EXAMPLE 3: Sum of Digits ---
+function sumDigits(n) {
+    if (n === 0) { return 0; }
+    return (n % 10) + sumDigits(Math.floor(n / 10));
+}
+console.log(sumDigits(123));
+// Input: 123
+// Output: 6
+
+// --- EXAMPLE 4: Power Calculation (a^b) ---
+function power(a, b) {
+    if (b === 0) { return 1; }
+    return a * power(a, b - 1);
+}
+console.log(power(2, 3));
+// Input: 2, 3
+// Output: 8
+
+// --- EXAMPLE 5: Count Down ---
+function countDown(n) {
+    if (n < 0) { return; }
+    console.log(n);
+    countDown(n - 1);
+}
+countDown(3);
+// Input: 3
+// Output: 3, 2, 1, 0
+
+// --- EXAMPLE 6: Sum of Range ---
+function sumRange(n) {
+    if (n <= 1) { return 1; }
+    return n + sumRange(n - 1);
+}
+console.log(sumRange(4));
+// Input: 4
+// Output: 10
+
+// --- EXAMPLE 7: Reverse a String ---
+function revStr(s) {
+    if (s === "") { return ""; }
+    return revStr(s.substr(1)) + s.charAt(0);
+}
+console.log(revStr("abc"));
+// Input: "abc"
+// Output: "cba"
+
+// --- EXAMPLE 8: Check Palindrome ---
+function isPal(s) {
+    if (s.length <= 1) { return true; }
+    if (s[0] !== s[s.length - 1]) { return false; }
+    return isPal(s.slice(1, -1));
+}
+console.log(isPal("racecar"));
+// Input: "racecar"
+// Output: true
+
+// --- EXAMPLE 9: GCD (Greatest Common Divisor) ---
+function gcd(a, b) {
+    if (!b) { return a; }
+    return gcd(b, a % b);
+}
+console.log(gcd(48, 18));
+// Input: 48, 18
+// Output: 6
+
+// --- EXAMPLE 10: Array Sum ---
+function sumArr(arr) {
+    if (arr.length === 0) { return 0; }
+    return arr[0] + sumArr(arr.slice(1));
+}
+console.log(sumArr([1, 2, 3]));
+// Input: [1, 2, 3]
+// Output: 6
+
+// --- EXAMPLE 11: Binary Search (Recursive) ---
+function binSearch(arr, target, start, end) {
+    if (start > end) { return -1; }
+    let mid = Math.floor((start + end) / 2);
+    if (arr[mid] === target) { return mid; }
+    if (arr[mid] > target) { return binSearch(arr, target, start, mid - 1); }
+    return binSearch(arr, target, mid + 1, end);
+}
+console.log(binSearch([1, 2, 3, 4], 3, 0, 3));
+// Input: [1, 2, 3, 4], target 3
+// Output: 2
+
+// --- EXAMPLE 12: Decimal to Binary ---
+function decToBin(n) {
+    if (n === 0) { return ""; }
+    return decToBin(Math.floor(n / 2)) + (n % 2);
+}
+console.log(decToBin(10));
+// Input: 10
+// Output: "1010"
+
+// --- EXAMPLE 13: Count Vowels ---
+function countV(s) {
+    if (s.length === 0) { return 0; }
+    let count = "aeiouAEIOU".includes(s[0]) ? 1 : 0;
+    return count + countV(s.slice(1));
+}
+console.log(countV("hello"));
+// Input: "hello"
+// Output: 2
+
+// --- EXAMPLE 14: Flatten Array ---
+function flatten(arr) {
+    let res = [];
+    arr.forEach((item) => {
+        if (Array.isArray(item)) { res = res.concat(flatten(item)); }
+        else { res.push(item); }
+    });
+    return res;
+}
+console.log(flatten([1, [2, [3]]]));
+// Input: [1, [2, [3]]]
+// Output: [1, 2, 3]
+
+// --- EXAMPLE 15: Find Max in Array ---
+function findMax(arr) {
+    if (arr.length === 1) { return arr[0]; }
+    return Math.max(arr[0], findMax(arr.slice(1)));
+}
+console.log(findMax([1, 5, 2]));
+// Input: [1, 5, 2]
+// Output: 5
+
+// --- EXAMPLE 16: Product of Array ---
+function prodArr(arr) {
+    if (arr.length === 0) { return 1; }
+    return arr[0] * prodArr(arr.slice(1));
+}
+console.log(prodArr([1, 2, 3, 4]));
+// Input: [1, 2, 3, 4]
+// Output: 24
+
+// --- EXAMPLE 17: Range of Numbers ---
+function range(start, end) {
+    if (start > end) { return []; }
+    return [start].concat(range(start + 1, end));
+}
+console.log(range(1, 3));
+// Input: 1, 3
+// Output: [1, 2, 3]
+
+// --- EXAMPLE 18: String Length ---
+function strLen(s) {
+    if (s === "") { return 0; }
+    return 1 + strLen(s.substring(1));
+}
+console.log(strLen("test"));
+// Input: "test"
+// Output: 4
+
+// --- EXAMPLE 19: All Occurrences ---
+function countOccur(arr, val) {
+    if (arr.length === 0) { return 0; }
+    let count = arr[0] === val ? 1 : 0;
+    return count + countOccur(arr.slice(1), val);
+}
+console.log(countOccur([1, 2, 1, 3], 1));
+// Input: [1, 2, 1, 3], 1
+// Output: 2
+
+// --- EXAMPLE 20: Capitalize Words ---
+function capWords(arr) {
+    if (arr.length === 0) { return []; }
+    let res = [arr[0].toUpperCase()].concat(capWords(arr.slice(1)));
+    return res;
+}
+console.log(capWords(["hi", "ai"]));
+// Input: ["hi", "ai"]
+// Output: ["HI", "AI"]
+
+// --- EXAMPLE 21: Multiples of Number ---
+function multiples(n, limit) {
+    if (limit === 0) { return []; }
+    return multiples(n, limit - 1).concat(n * limit);
+}
+console.log(multiples(5, 3));
+// Input: 5, 3
+// Output: [5, 10, 15]
+
+// --- EXAMPLE 22: Sum Nested Object Values ---
+function sumNested(obj) {
+    let sum = 0;
+    for (let key in obj) {
+        if (typeof obj[key] === "number") { sum += obj[key]; }
+        else if (typeof obj[key] === "object") { sum += sumNested(obj[key]); }
+    }
+    return sum;
+}
+console.log(sumNested({ a: 1, b: { c: 2 } }));
+// Input: { a: 1, b: { c: 2 } }
+// Output: 3
+
+// --- EXAMPLE 23: Harmonic Sum ---
+function harmonic(n) {
+    if (n < 2) { return 1; }
+    return 1 / n + harmonic(n - 1);
+}
+console.log(harmonic(2));
+// Input: 2
+// Output: 1.5
+
+// --- EXAMPLE 24: Pascal's Triangle Value ---
+function pascal(row, col) {
+    if (col === 0 || col === row) { return 1; }
+    return pascal(row - 1, col - 1) + pascal(row - 1, col);
+}
+console.log(pascal(4, 2));
+// Input: Row 4, Col 2
+// Output: 6
+
+// --- EXAMPLE 25: String Permutations (Simple) ---
+function permute(s) {
+    if (s.length <= 1) { return [s]; }
+    let res = [];
+    for (let i = 0; i < s.length; i++) {
+        let char = s[i];
+        let remaining = s.slice(0, i) + s.slice(i + 1);
+        for (let p of permute(remaining)) { res.push(char + p); }
+    }
+    return res;
+}
+console.log(permute("ab").length);
+// Input: "ab"
+// Output: 2
+
+// --- EXAMPLE 26: Evens from Array ---
+function getEvens(arr) {
+    if (arr.length === 0) { return []; }
+    let res = arr[0] % 2 === 0 ? [arr[0]] : [];
+    return res.concat(getEvens(arr.slice(1)));
+}
+console.log(getEvens([1, 2, 3, 4]));
+// Input: [1, 2, 3, 4]
+// Output: [2, 4]
+
+// --- EXAMPLE 27: Double All Elements ---
+function doubleAll(arr) {
+    if (arr.length === 0) { return []; }
+    return [arr[0] * 2].concat(doubleAll(arr.slice(1)));
+}
+console.log(doubleAll([10, 20]));
+// Input: [10, 20]
+// Output: [20, 40]
+
+// --- EXAMPLE 28: Count Consonants ---
+function countCons(s) {
+    if (s.length === 0) { return 0; }
+    let isC = /^[b-df-hj-np-tv-z]$/i.test(s[0]) ? 1 : 0;
+    return isC + countCons(s.slice(1));
+}
+console.log(countCons("abc"));
+// Input: "abc"
+// Output: 2
+
+// --- EXAMPLE 29: Repeat String ---
+function repeatS(s, n) {
+    if (n <= 0) { return ""; }
+    return s + repeatS(s, n - 1);
+}
+console.log(repeatS("A", 3));
+// Input: "A", 3
+// Output: "AAA"
+
+// --- EXAMPLE 30: Check Even (Mutual Recursion) ---
+function isEven(n) {
+    if (n === 0) { return true; }
+    if (n === 1) { return false; }
+    return isOdd(Math.abs(n) - 1);
+}
+function isOdd(n) {
+    return !isEven(n);
+}
+console.log(isEven(4));
+// Input: 4
+// Output: true*/
