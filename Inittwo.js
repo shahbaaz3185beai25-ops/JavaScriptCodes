@@ -1204,4 +1204,163 @@ const person14 = {
     }
 };
 person14.show();
-// Output: Sara*/
+// Output: Sara
+// // --- EXAMPLE 1: No Parameters ---
+const greet = () => {
+    return "Hello!";
+};
+console.log(greet());
+// Input: None
+// Output: Hello!
+
+// --- EXAMPLE 2: Single Parameter ---
+const square = (n) => {
+    return n * n;
+};
+console.log(square(4));
+// Input: 4
+// Output: 16
+
+// --- EXAMPLE 3: Multiple Parameters ---
+const add = (a, b) => {
+    return a + b;
+};
+console.log(add(5, 3));
+// Input: 5, 3
+// Output: 8
+
+// --- EXAMPLE 4: Simple String Concatenation ---
+const fullName = (first, last) => {
+    return first + " " + last;
+};
+console.log(fullName("John", "Doe"));
+// Input: "John", "Doe"
+// Output: John Doe
+
+// --- EXAMPLE 5: Simple Interest Calculation ---
+const getInterest = (p, r, t) => {
+    return (p * r * t) / 100;
+};
+console.log(getInterest(1000, 5, 2));
+// Input: 1000, 5, 2
+// Output: 100
+
+// --- EXAMPLE 6: Check Even Number ---
+const isEven = (num) => {
+    return num % 2 === 0;
+};
+console.log(isEven(10));
+// Input: 10
+// Output: true
+
+// --- EXAMPLE 7: Area of Rectangle ---
+const area = (l, w) => {
+    return l * w;
+};
+console.log(area(10, 5));
+// Input: 10, 5
+// Output: 50
+
+// --- EXAMPLE 8: Converting Celsius to Fahrenheit ---
+const toFah = (c) => {
+    return (c * 9/5) + 32;
+};
+console.log(toFah(30));
+// Input: 30
+// Output: 86
+
+// --- EXAMPLE 9: Check Positive Number ---
+const isPos = (n) => {
+    return n > 0;
+};
+console.log(isPos(-5));
+// Input: -5
+// Output: false
+
+// --- EXAMPLE 10: Minimum of Two Numbers ---
+const getMin = (a, b) => {
+    return a < b ? a : b;
+};
+console.log(getMin(15, 25));
+// Input: 15, 25
+// Output: 15
+
+// --- EXAMPLE 11: Cube of a Number ---
+const cube = (n) => {
+    return n * n * n;
+};
+console.log(cube(3));
+// Input: 3
+// Output: 27
+
+// --- EXAMPLE 12: Return an Object Literal ---
+const getPoint = (x, y) => {
+    return { x: x, y: y };
+};
+console.log(getPoint(10, 20));
+// Input: 10, 20
+// Output: { x: 10, y: 20 }
+
+// --- EXAMPLE 13: Perimeter of Square ---
+const peri = (s) => {
+    return 4 * s;
+};
+console.log(peri(5));
+// Input: 5
+// Output: 20
+
+// --- EXAMPLE 14: Check if String is Long ---
+const isLong = (str) => {
+    return str.length > 5;
+};
+console.log(isLong("Gemini"));
+// Input: "Gemini"
+// Output: true
+
+// --- EXAMPLE 15: Average of Three Numbers ---
+const avg = (a, b, c) => {
+    return (a + b + c) / 3;
+};
+console.log(avg(10, 20, 30));
+// Input: 10, 20, 30
+// Output: 20
+
+// --- EXAMPLE 16: Multiply Three Numbers ---
+const multi3 = (a, b, c) => {
+    return a * b * c;
+};
+console.log(multi3(2, 3, 4));
+// Input: 2, 3, 4
+// Output: 24
+
+// --- EXAMPLE 17: Get Last Character ---
+const lastChar = (s) => {
+    return s[s.length - 1];
+};
+console.log(lastChar("JS"));
+// Input: "JS"
+// Output: S
+
+// --- EXAMPLE 18: Check Voting Eligibility ---
+const canVote = (age) => {
+    return age >= 18;
+};
+console.log(canVote(16));
+// Input: 16
+// Output: false
+
+// --- EXAMPLE 19: Double a Number ---
+const double = (n) => {
+    return n * 2;
+};
+console.log(double(12));
+// Input: 12
+// Output: 24
+
+// --- EXAMPLE 20: Simple Greeting by Time ---
+const timeGreet = (hour) => {
+    return hour < 12 ? "Morning" : "Evening";
+};
+console.log(timeGreet(15));
+// Input: 15
+// Output: Evening*/
