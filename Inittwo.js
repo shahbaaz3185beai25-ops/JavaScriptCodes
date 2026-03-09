@@ -1766,7 +1766,7 @@ function isOdd(n) {
 }
 console.log(isEven(4));
 // Input: 4
-// Output: true*/
+// Output: true
 //1
 let numbers = [10, 20, 30, 40];
 let temp = numbers[1];
@@ -1789,4 +1789,4 @@ user.workPhone = tempPhone;
 
 {
     console.log("Updated User:", user);
-}
+}*/
