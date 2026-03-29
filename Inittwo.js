@@ -1789,4 +1789,31 @@ user.workPhone = tempPhone;
 
 {
     console.log("Updated User:", user);
+}
+
+let first_elem=document.querySelector("p");
+console.dir(first_elem);
+let elements=document.querySelectorAll("p");
+console.dir(tagss);
+let button=document.querySelector("#myID");
+console.dir(button);
+var heading = document.createElement("h2");
+
+heading.innerText = "Hello JS";
+
+
+heading.innerText += " from Ap students";
+
+
+{
+    document.body.appendChild(heading);
+    console.log(heading.innerText);
+}
+    
+   var title = document.getElementById("main-title");
+var firstBtn = document.querySelector(".btn");
+var allItems = document.querySelectorAll("li");
+
+{
+    console.log(title);
 }*/
