@@ -1817,3 +1817,15 @@ var allItems = document.querySelectorAll("li");
 {
     console.log(title);
 }*/
+
+var div = document.querySelector("div");
+var button = document.querySelector("button");
+div.addEventListener("click",()=>{
+    console.log("div");
+},true);
+button.addEventListener("click",(event)=>{
+    console.log("button");
+},true)
+button.addEventListener("click",(event)=>{
+    console.log("button1");
+});
